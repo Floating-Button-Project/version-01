@@ -9,10 +9,6 @@
 
 
     <style>
-        #cal{
-            border-radius: 50px;
-            margin-bottom: 10px;
-        }
 
         #cal{
             background-color: rgb(229, 145, 255);
@@ -21,6 +17,9 @@
             position: fixed;
             bottom: 80px;
             right: 30px;
+            border-radius: 50px;
+            margin-bottom: 10px;
+            padding: 15px;
         }
 
         button{
@@ -132,6 +131,11 @@
       </div>
 
     <!-- Messenger Chat plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
 
     <script>
       var chatbox = document.getElementById('fb-customer-chat');
