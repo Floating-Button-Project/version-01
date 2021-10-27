@@ -24,16 +24,37 @@
             background-color: rgb(240, 240, 240);
         }
 
-        #cal{
-            background-color: #EBC500;
-            display: none;
+        .bookAppoint{
             cursor: pointer;
             position: fixed;
-            bottom: 220px;
+            bottom: 300px;
             right: 25px;
-            border-radius: 50px;
             margin-bottom: 10px;
-            padding: 12px 13px;
+            color: white;
+        }
+
+        .medic{
+            cursor: pointer;
+            position: fixed;
+            bottom: 140px;
+            right: 25px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .bookAppoint .text,.medic .text{
+            background-color: #EBC500;
+            padding: 15px 13px;
+            display: none;
+            margin: 7px 0;
+        }
+
+        .bookAppoint #cal,.medic #med{
+            background-color: #EBC500;
+            padding: 12px 17px;
+            border-radius: 50px;
+            display: none;
+
         }
 
         button{
@@ -116,15 +137,29 @@
 </head>
 <body>
     <div class="widget-options">
-        <button class="options" id="cal" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <img src="calendar.png" alt="customerchat" height="35px" width="35px" ></i>
-        </button>
+
+        <div class="whole-label d-flex bookAppoint">
+            <div class="text me-3 fw-bold" id="cal-text">Book An Appointment</div>
+            <button class="options" id="cal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img src="calendar.png" alt="customerchat" height="35px" width="35px" ></i>
+            </button>
+        </div>
+
         
         <div id="fb-root"></div>
 
         <!-- Your Chat plugin code -->
         <div id="fb-customer-chat" class="fb-customerchat">
+
+
             
+        <div class="whole-label d-flex medic">
+            <div class="text me-3 fw-bold" id="med-text">Order Medication</div>
+            <button class="options" id="med" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img src="med.png" alt="customerchat" height="35px" width="35px" ></i>
+            </button>
+        </div>
+
     </div>
 
     </div>
@@ -176,16 +211,24 @@
 
 
     <script>
+        // document.getElementById("bookAppoint").style.display="none";
+
         function showIcons(){
             document.getElementById("open").style.display="none";
             document.getElementById("close").style.display="block";
             document.getElementById("cal").style.display="block";
+            document.getElementById("cal-text").style.display="block";
+            document.getElementById("med").style.display="block";
+            document.getElementById("med-text").style.display="block";
             document.getElementById("fb-root").style.display="block";
         }
         function closeIcons(){
             document.getElementById("open").style.display="block";
             document.getElementById("close").style.display="none";
             document.getElementById("cal").style.display="none";
+            document.getElementById("cal-text").style.display="none";
+            document.getElementById("med").style.display="none";
+            document.getElementById("med-text").style.display="none";
             document.getElementById("fb-root").style.display="none";
         }
 
