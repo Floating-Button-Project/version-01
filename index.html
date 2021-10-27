@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+      integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+      crossorigin="anonymous"
+    ></script>
 
 
     <style>
@@ -105,15 +116,17 @@
 </head>
 <body>
     <div class="widget-options">
-        <button class="options" id="cal" onclick="openWidget()">
+        <button class="options" id="cal" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <img src="calendar.png" alt="customerchat" height="35px" width="35px" ></i>
-            <!-- <div id="vetstoria-fw-btn-container" data-mode="html5" data-domain="vega.vetstoria.space" data-site-hash="5b57fde01d0b7"></div>
-            <script src="https://vega.vetstoria.space/js/oabp-widget-floating-button.min.js"></script> -->
         </button>
         
-        <div class="options"><div id="fb-root"></div>
-            <div id="fb-customer-chat" class="fb-customerchat">
-            </div></div>
+        <div id="fb-root"></div>
+
+        <!-- Your Chat plugin code -->
+        <div id="fb-customer-chat" class="fb-customerchat">
+            
+    </div>
+
     </div>
     <div class="main">
         <button class="main-btns" id="open" onclick="showIcons()"><img src="8.png" alt="customerchat" height="28px" width="25px" style="margin:-2px 0 0 -3px"></button>
@@ -121,23 +134,22 @@
     </div>
 
 
-    <!-- widget popup -->
-    <div id=black-box onclick="closeWidget()">
-        <div id="widgetPopup">
-          <div id="close-popup" onclick="closeWidget()"><i class="fa fa-times fa-lg" aria-hidden="true"></i></i></div>
-          <div id="embeded-code">
-  
-            <!-- embedded widget code -->
-            <div id="oabp-widget" data-mode="html5" data-domain="booking.vetstoria.com" data-site-hash="5d09348828aaa"
-              data-mobile-message="Touch Here to Make an Appointment" data-auto-mobile-redirection="false"
-              data-force-desktop-view="true" data-offset="0"
-              data-theme-customisation="d91c5f,d91c5f,d91c5f,ffffff,000000,000000,d91c5f,d91c5f,d91c5f,d91c5f"></div>
-            <script src="https://booking.vetstoria.com/js/oabp-widget-require.min.js"></script>
-            <!-- ------ -->
-  
-          </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="oabp-widget" data-mode="html5" data-domain="booking-demo.vetstoria.com" data-site-hash="5cde7b7da31f2" data-mobile-message="Touch Here to Make an Appointment" 
+                data-auto-mobile-redirection="false" data-force-desktop-view="true" data-offset="0" data-theme-customisation="2B0763,7900FF,2B0763,ffffff,7900FF,7900FF,7900FF,7900FF,7900FF,7900FF">
+                </div>
+                <script src="https://booking-demo.vetstoria.com/js/oabp-widget-require.min.js"></script>
+            </div>
         </div>
-      </div>
+        </div>
+    </div>
 
 <!-- Messenger Chat plugin Code -->
 
