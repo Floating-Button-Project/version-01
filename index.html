@@ -42,7 +42,7 @@
             color: white;
         }
 
-        .bookAppoint .text,.medic .text,#chat-text{
+        .bookAppoint .text,.medic .text,#chat-text, #bot-text{
             background-color: #EBC500;
             padding: 10px 13px;
             display: none;
@@ -55,6 +55,13 @@
             border-radius: 50px;
             display: none;
 
+        }
+
+        #bot-text{
+            position: fixed;
+            bottom: 230px;
+            right: 85px;
+            color: white;
         }
 
         button{
@@ -145,9 +152,9 @@
             </button>
         </div>
 
-        
-            <div id="fb-root">
-                <div class="text me-3 fw-bold" id="chat-text" style="background-color: black;">Chat With Us</div></div>
+         
+        <div class="text me-3 fw-bold" id="bot-text">Chat With Us</div>
+            <div id="fb-root"></div>
 
         <!-- Your Chat plugin code -->
         <div id="fb-customer-chat" class="fb-customerchat">
@@ -263,6 +270,7 @@
             document.getElementById("cal-text").style.display="block";
             document.getElementById("med").style.display="block";
             document.getElementById("med-text").style.display="block";
+            document.getElementById("bot-text").style.display="block";
             document.getElementById("fb-root").style.display="block";
         }
         function closeIcons(){
@@ -273,6 +281,7 @@
             document.getElementById("med").style.display="none";
             document.getElementById("med-text").style.display="none";
             document.getElementById("fb-root").style.display="none";
+            document.getElementById("bot-text").style.display="none";
         }
 
         function openWidget(){
